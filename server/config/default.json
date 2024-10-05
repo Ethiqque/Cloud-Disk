@@ -1,4 +1,5 @@
 {
   "serverPort" : 5001,
-  "dbUrl" : "mongodb+srv://ethiqque:qs45MtucMVvDG3fL@cloud.ukeke.mongodb.net/?retryWrites=true&w=majority&appName=cloud"
+  "dbUrl" : "mongodb+srv://ethiqque:qs45MtucMVvDG3fL@cloud.ukeke.mongodb.net/?retryWrites=true&w=majority&appName=cloud",
+  "secretKey" : "mern-secret-key"
 }
