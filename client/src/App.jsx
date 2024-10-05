@@ -2,7 +2,7 @@ import React from 'react';
 
 function App() {
   return (
-      <div>Happy hacking ethiqque!</div>
+      <div>Happy hacking!</div>
   );
 }
 
