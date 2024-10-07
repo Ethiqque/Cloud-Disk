@@ -1,22 +1,28 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const config = require('config');
-const authRouter = require('./routes/auth.routes');
-const app = express();
-const PORT = config.get('serverPort');
+const express = require("express")
+const mongoose = require("mongoose")
+const config = require("config")
+const authRouter = require("./routes/auth.routes")
+const app = express()
+const PORT = config.get('serverPort')
+const corsMiddleware = require('./middleware/cors.middleware')
 
-app.use(express.json());
+app.use(corsMiddleware)
+app.use(express.json())
 app.use("/api/auth", authRouter)
+
 
 const start = async () => {
     try {
-        mongoose.connect(config.get('dbUrl'));
-
-        app.listen(PORT, () => {
-            console.log(`Server started on port ${PORT}`);
+        await mongoose.connect(config.get("dbUrl"), {
+            useNewUrlParser:true,
+            useUnifiedTopology:true
         })
 
-    } catch (e){
+        app.listen(PORT, () => {
+            console.log('Server started on port ', PORT)
+        })
+    } catch (e) {
+        console.log(e)
     }
 }
 
