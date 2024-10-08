@@ -10,12 +10,12 @@ body {
 #root {
     width: 100%;
 }
-.app{
+.app {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.wrap{
+.wrap {
     width: 1140px;
     display: flex;
     flex-direction: column;
