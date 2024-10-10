@@ -2,10 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #566885;
+    color: black;
+    font-weight: 550;
+    font-family: 'Sharp Grotesk', sans-serif;
 }
 body {
-    background-color: #E9E6E6;
+    background-color: #F7F5F2;
 }
 #root {
     width: 100%;
